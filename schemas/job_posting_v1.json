@@ -1,0 +1,109 @@
+{
+  "id": "job_posting_v1",
+  "version": "1.0.0",
+  "label": "Job Posting",
+  "description": "Hiring for a position, project, or role. Post what you need and let candidates acknowledge.",
+  "category": "services",
+  "icon": "clipboard-document-list",
+  "fields": [
+    {
+      "key": "role_title",
+      "label": "Role Title",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., Senior Rust Developer",
+      "maxLength": 100
+    },
+    {
+      "key": "description",
+      "label": "Job Description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Describe the role, responsibilities, and what success looks like.",
+      "maxLength": 3000
+    },
+    {
+      "key": "engagement_type",
+      "label": "Engagement Type",
+      "type": "select",
+      "required": true,
+      "options": [
+        "Full-time",
+        "Part-time",
+        "Contract / Freelance",
+        "One-time Project",
+        "Ongoing Retainer",
+        "Volunteer"
+      ]
+    },
+    {
+      "key": "remote",
+      "label": "Remote?",
+      "type": "select",
+      "required": false,
+      "options": ["Fully Remote", "Hybrid", "On-site", "Flexible"]
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "type": "text",
+      "required": false,
+      "placeholder": "Remote / New York, USA"
+    },
+    {
+      "key": "compensation",
+      "label": "Compensation",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., 5000 USDC/month, equity, hourly rate, negotiable"
+    },
+    {
+      "key": "required_skills",
+      "label": "Required Skills",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "key": "nice_to_have",
+      "label": "Nice to Have",
+      "type": "tags",
+      "required": false
+    },
+    {
+      "key": "team_size",
+      "label": "Team Size",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., Just me (solo project), team of 5"
+    },
+    {
+      "key": "start_date",
+      "label": "Start Date",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., Immediate, ASAP, Q3 2026"
+    },
+    {
+      "key": "image_refs",
+      "label": "Company / Project Images",
+      "type": "image_refs",
+      "required": false
+    },
+    {
+      "key": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    }
+  ],
+  "state_labels": {
+    "defaults": [
+      "open",
+      "reviewing_candidates",
+      "interviewing",
+      "position_filled",
+      "closed"
+    ],
+    "description": "Suggested state labels for the hiring process."
+  }
+}

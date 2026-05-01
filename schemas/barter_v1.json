@@ -1,0 +1,78 @@
+{
+  "id": "barter_v1",
+  "version": "1.0.0",
+  "label": "Barter / Trade",
+  "description": "Exchange of goods, services, or assets for other goods, services, or assets — no currency required.",
+  "category": "goods",
+  "icon": "arrow-path",
+  "fields": [
+    {
+      "key": "offering",
+      "label": "I Am Offering",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Describe what you are willing to provide in the exchange.",
+      "maxLength": 500
+    },
+    {
+      "key": "seeking",
+      "label": "I Am Seeking",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Describe what you want in return.",
+      "maxLength": 500
+    },
+    {
+      "key": "offering_type",
+      "label": "Type of Offering",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Physical Good",
+        "Digital Good",
+        "Service / Skill",
+        "Crypto Asset",
+        "Time / Labor",
+        "Other"
+      ]
+    },
+    {
+      "key": "seeking_type",
+      "label": "Type Sought",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Physical Good",
+        "Digital Good",
+        "Service / Skill",
+        "Crypto Asset",
+        "Time / Labor",
+        "Open to Offers",
+        "Other"
+      ]
+    },
+    {
+      "key": "location",
+      "label": "Location (if relevant)",
+      "type": "text",
+      "required": false,
+      "placeholder": "City or Online — needed for physical goods"
+    },
+    {
+      "key": "image_refs",
+      "label": "Photos of Offering",
+      "type": "image_refs",
+      "required": false
+    },
+    {
+      "key": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    }
+  ],
+  "state_labels": {
+    "defaults": ["open", "discussing", "agreed", "completed", "cancelled"],
+    "description": "Suggested state labels."
+  }
+}

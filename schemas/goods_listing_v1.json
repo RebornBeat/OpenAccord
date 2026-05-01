@@ -1,0 +1,149 @@
+{
+  "id": "goods_listing_v1",
+  "version": "1.0.0",
+  "label": "Goods Listing",
+  "description": "Physical or digital goods for sale or trade. Electronics, clothing, collectibles, vehicles, equipment.",
+  "category": "goods",
+  "icon": "package",
+  "fields": [
+    {
+      "key": "title",
+      "label": "Item Title",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., Used MacBook Pro 14-inch M3",
+      "maxLength": 120
+    },
+    {
+      "key": "description",
+      "label": "Item Description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Describe the item, condition, specifications, and any flaws.",
+      "maxLength": 2000
+    },
+    {
+      "key": "condition",
+      "label": "Condition",
+      "type": "select",
+      "required": true,
+      "options": [
+        "New (sealed)",
+        "Like New",
+        "Excellent",
+        "Good",
+        "Fair",
+        "For Parts"
+      ]
+    },
+    {
+      "key": "price",
+      "label": "Asking Price",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., 1200 USDC, $800 cash, OBO (Or Best Offer)"
+    },
+    {
+      "key": "currency_preference",
+      "label": "Preferred Currency",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Any",
+        "USDC",
+        "USDT",
+        "ETH",
+        "SUI",
+        "SOL",
+        "Cash (USD)",
+        "Cash (EUR)",
+        "Bank Transfer",
+        "Negotiable"
+      ]
+    },
+    {
+      "key": "shipping",
+      "label": "Shipping / Delivery",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Local Pickup Only",
+        "Shipping Available",
+        "Local or Shipping",
+        "Digital Delivery"
+      ]
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "type": "text",
+      "required": false,
+      "placeholder": "City, Country — or 'Online' for digital items"
+    },
+    {
+      "key": "quantity",
+      "label": "Quantity Available",
+      "type": "number",
+      "required": false,
+      "placeholder": "1"
+    },
+    {
+      "key": "category",
+      "label": "Category",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Electronics",
+        "Computers & Laptops",
+        "Phones & Tablets",
+        "Vehicles",
+        "Clothing & Accessories",
+        "Collectibles",
+        "Books & Media",
+        "Tools & Equipment",
+        "Home & Furniture",
+        "Art & Crafts",
+        "Sports & Outdoors",
+        "Other"
+      ]
+    },
+    {
+      "key": "image_refs",
+      "label": "Photos",
+      "type": "image_refs",
+      "required": false,
+      "description": "Upload photos to IPFS, Arweave, or any CDN and paste the links here. Tip: use https://web3.storage for free IPFS storage."
+    },
+    {
+      "key": "trade_accepted",
+      "label": "Open to Trade?",
+      "type": "boolean",
+      "required": false,
+      "description": "Indicate if you'd accept a trade/barter for this item."
+    },
+    {
+      "key": "trade_for",
+      "label": "Trade For",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., Looking for iPhone 15 Pro or equivalent value"
+    },
+    {
+      "key": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    }
+  ],
+  "state_labels": {
+    "defaults": [
+      "listed",
+      "pending_meetup",
+      "pending_payment",
+      "shipped",
+      "sold",
+      "cancelled"
+    ],
+    "description": "Suggested state labels."
+  }
+}

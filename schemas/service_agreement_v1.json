@@ -1,0 +1,131 @@
+{
+  "id": "service_agreement_v1",
+  "version": "1.0.0",
+  "label": "Service Agreement",
+  "description": "Freelance work, consulting, professional services, gig work, or any service offering.",
+  "category": "services",
+  "icon": "briefcase",
+  "fields": [
+    {
+      "key": "title",
+      "label": "Service Title",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., Build a React dashboard",
+      "maxLength": 120
+    },
+    {
+      "key": "description",
+      "label": "Full Description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Describe the service in detail, scope, deliverables, and any requirements.",
+      "maxLength": 2000
+    },
+    {
+      "key": "rate",
+      "label": "Rate / Compensation",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., 500 USDC, 0.1 ETH, negotiable, per hour"
+    },
+    {
+      "key": "currency_preference",
+      "label": "Preferred Currency",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Any",
+        "USDC",
+        "USDT",
+        "ETH",
+        "SUI",
+        "SOL",
+        "BTC",
+        "Fiat",
+        "Negotiable"
+      ]
+    },
+    {
+      "key": "payment_methods",
+      "label": "Accepted Payment Methods",
+      "type": "multiselect",
+      "required": false,
+      "options": [
+        "Crypto (on-chain)",
+        "Bank Transfer",
+        "PayPal",
+        "Wise",
+        "Cash",
+        "Negotiable"
+      ]
+    },
+    {
+      "key": "duration",
+      "label": "Estimated Duration",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., 1 week, 3 days, ongoing"
+    },
+    {
+      "key": "milestones",
+      "label": "Milestones",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "List any milestones, e.g.:\n1. Design mockups (Day 2)\n2. Alpha build (Day 5)\n3. Final delivery (Day 7)"
+    },
+    {
+      "key": "skills_required",
+      "label": "Skills / Requirements",
+      "type": "tags",
+      "required": false,
+      "placeholder": "e.g., React, TypeScript, API integration"
+    },
+    {
+      "key": "availability",
+      "label": "Availability",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., Starts immediately, available weekends, timezone UTC-5"
+    },
+    {
+      "key": "escrow_preference",
+      "label": "Escrow Preference",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., No escrow, Opensea escrow, buyer holds in own wallet"
+    },
+    {
+      "key": "image_refs",
+      "label": "Portfolio / Reference Images",
+      "type": "image_refs",
+      "required": false,
+      "description": "IPFS, Arweave, or HTTPS links to portfolio images or reference materials."
+    },
+    {
+      "key": "location",
+      "label": "Location (if relevant)",
+      "type": "text",
+      "required": false,
+      "placeholder": "Remote / New York, USA / Global"
+    },
+    {
+      "key": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false,
+      "placeholder": "Add searchable tags"
+    }
+  ],
+  "state_labels": {
+    "defaults": [
+      "open",
+      "in_progress",
+      "awaiting_review",
+      "revision_requested",
+      "completed",
+      "cancelled"
+    ],
+    "description": "Suggested state labels. Users may use any custom label."
+  }
+}

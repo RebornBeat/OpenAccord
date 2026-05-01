@@ -1,0 +1,158 @@
+{
+  "id": "asset_swap_v1",
+  "version": "1.0.0",
+  "label": "Asset Exchange",
+  "description": "Coordinating a peer-to-peer exchange of crypto assets, tokens, or cross-chain swaps without an intermediary. Users execute all transfers independently.",
+  "category": "financial",
+  "icon": "arrows-right-left",
+  "warning": "Users are solely responsible for executing transfers, verifying counterparties, and complying with all applicable laws. OpenAccord does not facilitate, execute, or guarantee any exchange. Use at your own risk.",
+  "fields": [
+    {
+      "key": "offer_asset",
+      "label": "I Am Offering",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., 500 USDC on Ethereum"
+    },
+    {
+      "key": "offer_chain",
+      "label": "Offering On Chain",
+      "type": "select",
+      "required": true,
+      "options": [
+        "Ethereum",
+        "Sui",
+        "Solana",
+        "Polygon",
+        "Arbitrum",
+        "Base",
+        "Avalanche",
+        "BNB Chain",
+        "Bitcoin",
+        "Other"
+      ]
+    },
+    {
+      "key": "offer_amount",
+      "label": "Offer Amount",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., 500"
+    },
+    {
+      "key": "offer_token",
+      "label": "Offer Token / Asset",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., USDC, ETH, SUI, SOL"
+    },
+    {
+      "key": "request_asset",
+      "label": "I Am Requesting",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., 0.15 ETH on Ethereum"
+    },
+    {
+      "key": "request_chain",
+      "label": "Requesting On Chain",
+      "type": "select",
+      "required": true,
+      "options": [
+        "Ethereum",
+        "Sui",
+        "Solana",
+        "Polygon",
+        "Arbitrum",
+        "Base",
+        "Avalanche",
+        "BNB Chain",
+        "Bitcoin",
+        "Other"
+      ]
+    },
+    {
+      "key": "request_amount",
+      "label": "Request Amount",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., 0.15"
+    },
+    {
+      "key": "request_token",
+      "label": "Request Token / Asset",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., ETH, USDC, BTC"
+    },
+    {
+      "key": "rate_note",
+      "label": "Rate Note",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., Fixed rate, flexible ±2%, market rate at time of exchange"
+    },
+    {
+      "key": "exchange_mechanism",
+      "label": "Exchange Mechanism",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Trust-based (no escrow)",
+        "Atomic Swap (if supported)",
+        "Third-party escrow (user-chosen)",
+        "Multisig arrangement",
+        "Negotiable"
+      ]
+    },
+    {
+      "key": "fiat_methods",
+      "label": "Fiat Methods (if applicable)",
+      "type": "multiselect",
+      "required": false,
+      "options": [
+        "Bank Transfer",
+        "SEPA",
+        "Wire",
+        "ACH",
+        "PayPal",
+        "Wise",
+        "Cash",
+        "Zelle",
+        "Venmo",
+        "Other"
+      ]
+    },
+    {
+      "key": "minimum_reputation",
+      "label": "Counterparty Requirements",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., At least 5 recorded outcomes, verified Telegram, no minimum"
+    },
+    {
+      "key": "notes",
+      "label": "Additional Notes",
+      "type": "textarea",
+      "required": false,
+      "maxLength": 500
+    },
+    {
+      "key": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    }
+  ],
+  "state_labels": {
+    "defaults": [
+      "open",
+      "counterparty_found",
+      "transfer_initiated",
+      "awaiting_confirmation",
+      "completed",
+      "cancelled"
+    ],
+    "description": "Suggested state labels for tracking the exchange lifecycle."
+  }
+}

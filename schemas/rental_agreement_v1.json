@@ -1,0 +1,136 @@
+{
+  "id": "rental_agreement_v1",
+  "version": "1.0.0",
+  "label": "Rental / Lease",
+  "description": "Property, equipment, vehicles, or any asset available for temporary use or lease.",
+  "category": "goods",
+  "icon": "home",
+  "fields": [
+    {
+      "key": "title",
+      "label": "Rental Title",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., 2BR Apartment in Santo Domingo, Motorcycle for weekend",
+      "maxLength": 120
+    },
+    {
+      "key": "description",
+      "label": "Description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Full description, amenities, terms, and any rules.",
+      "maxLength": 2000
+    },
+    {
+      "key": "rental_type",
+      "label": "Rental Type",
+      "type": "select",
+      "required": true,
+      "options": [
+        "Real Estate",
+        "Vehicle",
+        "Equipment",
+        "Storage",
+        "Workspace / Office",
+        "Other"
+      ]
+    },
+    {
+      "key": "rate",
+      "label": "Rental Rate",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., 800 USDC/month, 50 USD/day, negotiable"
+    },
+    {
+      "key": "rate_period",
+      "label": "Rate Period",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Per Hour",
+        "Per Day",
+        "Per Week",
+        "Per Month",
+        "Per Year",
+        "Custom"
+      ]
+    },
+    {
+      "key": "minimum_duration",
+      "label": "Minimum Duration",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., 1 month, 3 days, no minimum"
+    },
+    {
+      "key": "deposit",
+      "label": "Deposit Required",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., 1 month deposit, no deposit"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "type": "text",
+      "required": true,
+      "placeholder": "Address or general area — never include exact address in public listing"
+    },
+    {
+      "key": "available_from",
+      "label": "Available From",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., June 1, 2026, Immediately"
+    },
+    {
+      "key": "amenities",
+      "label": "Amenities / Features",
+      "type": "tags",
+      "required": false,
+      "placeholder": "e.g., WiFi, A/C, parking, furnished"
+    },
+    {
+      "key": "image_refs",
+      "label": "Photos",
+      "type": "image_refs",
+      "required": false,
+      "description": "Upload photos to IPFS or any CDN. Never include images revealing exact private address."
+    },
+    {
+      "key": "payment_methods",
+      "label": "Accepted Payment",
+      "type": "multiselect",
+      "required": false,
+      "options": [
+        "USDC",
+        "USDT",
+        "ETH",
+        "SUI",
+        "SOL",
+        "Bank Transfer",
+        "Cash",
+        "Crypto (any)",
+        "Negotiable"
+      ]
+    },
+    {
+      "key": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    }
+  ],
+  "state_labels": {
+    "defaults": [
+      "available",
+      "pending_deposit",
+      "rented",
+      "available_soon",
+      "off_market"
+    ],
+    "description": "Suggested state labels."
+  }
+}

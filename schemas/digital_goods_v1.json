@@ -1,0 +1,114 @@
+{
+  "id": "digital_goods_v1",
+  "version": "1.0.0",
+  "label": "Digital Goods",
+  "description": "Software, digital art, NFTs, datasets, templates, ebooks, licenses, source code, or any digital product.",
+  "category": "goods",
+  "icon": "cpu-chip",
+  "fields": [
+    {
+      "key": "title",
+      "label": "Product Title",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g., Figma UI Kit — Dark Dashboard",
+      "maxLength": 120
+    },
+    {
+      "key": "description",
+      "label": "Product Description",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "Describe the digital product, what's included, formats, and usage rights.",
+      "maxLength": 2000
+    },
+    {
+      "key": "product_type",
+      "label": "Product Type",
+      "type": "select",
+      "required": true,
+      "options": [
+        "Software / App",
+        "Source Code",
+        "Design Assets",
+        "Templates",
+        "Digital Art",
+        "Dataset",
+        "Ebook / Document",
+        "Music / Audio",
+        "Video",
+        "3D Model",
+        "License Key",
+        "NFT / On-chain Asset",
+        "Other"
+      ]
+    },
+    {
+      "key": "price",
+      "label": "Price",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., 50 USDC, 0.02 ETH, Name Your Price"
+    },
+    {
+      "key": "license",
+      "label": "License / Usage Rights",
+      "type": "select",
+      "required": false,
+      "options": [
+        "Personal Use Only",
+        "Commercial Use Included",
+        "Open Source (MIT)",
+        "Open Source (GPL)",
+        "Creative Commons CC-BY",
+        "Creative Commons CC0 (Public Domain)",
+        "Exclusive License",
+        "Custom (see description)"
+      ]
+    },
+    {
+      "key": "delivery_method",
+      "label": "Delivery Method",
+      "type": "select",
+      "required": false,
+      "options": [
+        "IPFS Link (automatic)",
+        "Arweave Link (automatic)",
+        "Email after payment",
+        "Download link after payment",
+        "On-chain transfer",
+        "Off-chain arrangement"
+      ]
+    },
+    {
+      "key": "preview_refs",
+      "label": "Preview Images / Screenshots",
+      "type": "image_refs",
+      "required": false,
+      "description": "IPFS, Arweave, or HTTPS links to preview images."
+    },
+    {
+      "key": "file_formats",
+      "label": "File Formats",
+      "type": "tags",
+      "required": false,
+      "placeholder": "e.g., .zip, .figma, .pdf, .mp4"
+    },
+    {
+      "key": "tags",
+      "label": "Tags",
+      "type": "tags",
+      "required": false
+    }
+  ],
+  "state_labels": {
+    "defaults": [
+      "listed",
+      "payment_received",
+      "delivered",
+      "completed",
+      "cancelled"
+    ],
+    "description": "Suggested state labels."
+  }
+}

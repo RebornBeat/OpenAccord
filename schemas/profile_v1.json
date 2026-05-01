@@ -1,0 +1,88 @@
+{
+  "id": "profile_v1",
+  "version": "1.0.0",
+  "label": "Profile / Store",
+  "description": "A public identity record. The GUI renders a Store view aggregating all Intents from this address.",
+  "category": "identity",
+  "icon": "user-circle",
+  "fields": [
+    {
+      "key": "display_name",
+      "label": "Display Name",
+      "type": "text",
+      "required": false,
+      "placeholder": "Your name or handle",
+      "maxLength": 60
+    },
+    {
+      "key": "bio",
+      "label": "Bio",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Briefly describe yourself, what you offer, or what you're looking for.",
+      "maxLength": 500
+    },
+    {
+      "key": "avatar_ref",
+      "label": "Avatar",
+      "type": "image_refs",
+      "required": false,
+      "description": "Single IPFS, Arweave, or HTTPS link to your avatar image.",
+      "maxItems": 1
+    },
+    {
+      "key": "website",
+      "label": "Website",
+      "type": "url",
+      "required": false,
+      "placeholder": "https://yoursite.com"
+    },
+    {
+      "key": "specialties",
+      "label": "Specialties / Tags",
+      "type": "tags",
+      "required": false,
+      "placeholder": "e.g., Rust developer, graphic design, crypto trading"
+    },
+    {
+      "key": "languages",
+      "label": "Languages",
+      "type": "tags",
+      "required": false,
+      "placeholder": "e.g., English, Spanish, Portuguese"
+    },
+    {
+      "key": "timezone",
+      "label": "Timezone",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., UTC-5, America/New_York"
+    },
+    {
+      "key": "preferred_chains",
+      "label": "Preferred Chains",
+      "type": "multiselect",
+      "required": false,
+      "options": [
+        "Ethereum",
+        "Sui",
+        "Solana",
+        "Polygon",
+        "Arbitrum",
+        "Base",
+        "Any"
+      ]
+    },
+    {
+      "key": "ens_name",
+      "label": "ENS / On-Chain Identity",
+      "type": "text",
+      "required": false,
+      "placeholder": "e.g., alice.eth, alice.sui"
+    }
+  ],
+  "state_labels": {
+    "defaults": ["active", "away", "inactive"],
+    "description": "Profile status."
+  }
+}
