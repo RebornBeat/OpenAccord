@@ -1,6 +1,3 @@
-Here is the fully updated, corrected, and expanded `README.md`. This version integrates the new vision, the multi-chain advantages, the ecosystem potential, and the advanced "Schema-Bound Acknowledgement" architecture while preserving all existing technical details and structure.
-
-```markdown
 # OpenAccord
 
 **A neutral, open-source protocol for publishing intents and recording self-directed outcomes across multiple blockchains.**
